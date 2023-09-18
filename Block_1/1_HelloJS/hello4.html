@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="myButton">click me</button>
+    <button id="myButton2">click me too</button>
+    <script type="text/JavaScript">
+      document.adEventListener("DOMContentLoaded", () => {
+          var button = document.getElementById("myButton");
+          button.addEventListener("click", () => {
+              alert("you clicked me");
+          });
+          var button2 = document.getElementById("myButton2");
+          button2.addEventListener("click", () => {
+              alert("you clicked me too");
+          });
+      });
+    </script>
+  </body>
+</html>

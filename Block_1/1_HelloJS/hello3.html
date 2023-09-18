@@ -12,5 +12,14 @@
       value="Click me"
       onclick="alert('you clicked me')"
     />
+    <button id="myButton2">also Click me</button>
+
+    <script type="text/JavaScript">
+      const myTestfunction2 = () => {
+          alert("you clicked me too");
+      };
+      var button = document.getElementById("myButton2");
+      button.onclick = myTestfunction2;
+    </script>
   </body>
 </html>

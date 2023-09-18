@@ -4,39 +4,76 @@
     <link rel="stylesheet" href="CSS_Spofify.css" />
     <title>Spoofify</title>
   </head>
-
   <body>
     <header>
-      <h1>Spoofify</h1>
-      <section class="button_sect">
-        <button href="https://www.billboard.com/charts/hot-100/1992-05-11/">
-          Top of your birthweek
-        </button>
-        <button href="https://loremflickr.com/480/480/cd,album,cover?random=1">
-          Latest Releases Randomized
-        </button>
-      </section>
+      <span id="title"> Spoofify </span>
+      <nav>
+        <ul>
+          <li>
+            <a href="#top-of-your-birthweek">Top of your birthweek</a>
+            <a href="#latest-releases-randomized">Latest releases randomized</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-
-    <h2>Your Spoofed overview</h2>
-    <p>
-      Welcome to Spoofify, the rip-off music streaming service of ICT Modul 294
-    </p>
-
-    <div class="Top of your birthweek">
-      <h2>Top of your Birthweek</h2>
-      <ol>
-        <li><b>SOS</b> by <i>Kris Kross</i></li>
-        <li><b>My Lovin' (you're Never Gonna Get It)</b> by <i>En Vogue</i></li>
-        <li>Bohemian Rhapsody By Queen</li>
-        <li>Save The Best For Last by Vanessa Williams</li>
-        <li>Live And Lern by Joe Public</li>
-      </ol>
-    </div>
-
-    <div class="Latest Releases randomized">
-      <h2>Latest Releases Randomized</h2>
-    </div>
+    <main>
+      <h1>Your Spoofed overview</h1>
+      <p>
+        Welcome to Spoofify, <em>the rip-off music streaming service</em> of ICT
+        Modul 294!
+      </p>
+      <section>
+        <h2 id="top-of-your-birthweek">Top of my Birthweek</h2>
+        <ol>
+          <li><b>SOS</b> by <i>Kris Kross</i></li>
+          <li><b>Bad Day</b> by <i>Daniel Powter</i></li>
+          <li><b>Ridin'</b> By <i>Chamillionaire Featuring Krayzie Bone</i></li>
+          <li><b>Temperature</b> by <i>Sean Paul</i></li>
+          <li><b>Dani California</b> by <i>Red hot Chili Peppers</i></li>
+        </ol>
+      </section>
+      <section>
+        <h2 id="latest-releases-randomized">Latest releases randomized</h2>
+        <ul id="releases-grid">
+          <li>
+            <img
+              src="https://loremflickr.com/480/480/cd,album,cover?random=1"
+              alt="Random cover 1"
+            />
+          </li>
+          <li>
+            <img
+              src="https://loremflickr.com/480/480/cd,album,cover?random=2"
+              alt="Random cover 2"
+            />
+          </li>
+          <li>
+            <img
+              src="https://loremflickr.com/480/480/cd,album,cover?random=3"
+              alt="Random cover 3"
+            />
+          </li>
+          <li>
+            <img
+              src="https://loremflickr.com/480/480/cd,album,cover?random=4"
+              alt="Random cover 4"
+            />
+          </li>
+          <li>
+            <img
+              src="https://loremflickr.com/480/480/cd,album,cover?random=5"
+              alt="Random cover 5"
+            />
+          </li>
+          <li>
+            <img
+              src="https://loremflickr.com/480/480/cd,album,cover?random=6"
+              alt="Random cover 6"
+            />
+          </li>
+        </ul>
+      </section>
+    </main>
     <footer>
       <p>&copy; 2023 Spoofify Example, Inc.</p>
     </footer>

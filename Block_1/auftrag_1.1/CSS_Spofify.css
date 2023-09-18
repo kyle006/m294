@@ -1,38 +1,52 @@
 :root {
-    font-size: 16px;
-  }
-  body {
-    background-color: #1cd761; /* Set the background color to green */
-    color: rgb(0, 0, 0); /* Set the text color to white for better visibility */
-  }
-  
-  header {
-    height: 7rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
-  
-  header h1 {
-    font-size: 2em;
-  }
-  
-  nav a {
-    border-radius: 3rem;
-    padding: 0.6rem;
-    border: 2px solid #000;
-    margin: 0 0.5rem;
-  }
- .button_sect{
-    border-color: #67e897;
-    color: #67e897;
- }
-  
-  footer {
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    background-color: #b7fbce;
-  }
-  
+  --primary-color: #1cd761;
+  --secondary-color: #b7facf;
+  --text-color: #000000;
+  --alternative-text-color: #ffffff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  max-width: 50rem;
+}
+
+header {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 1rem 1rem 0 0;
+}
+nav ul {
+  list-style: none;
+}
+
+nav ul a {
+  color: var(--alternative-text-color);
+  text-decoration: none;
+  padding: 0.6rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 3rem;
+}
+
+#title {
+  font-size: 2em;
+}
+
+#releases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#releases-grid img {
+  width: 10rem;
+}

@@ -1,0 +1,38 @@
+:root {
+    font-size: 16px;
+  }
+  body {
+    background-color: #1cd761; /* Set the background color to green */
+    color: rgb(0, 0, 0); /* Set the text color to white for better visibility */
+  }
+  
+  header {
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+  
+  nav a {
+    border-radius: 3rem;
+    padding: 0.6rem;
+    border: 2px solid #000;
+    margin: 0 0.5rem;
+  }
+ .button_sect{
+    border-color: #67e897;
+    color: #67e897;
+ }
+  
+  footer {
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #b7fbce;
+  }
+  

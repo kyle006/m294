@@ -1,9 +1,28 @@
-function addRandomAlbums () {
-    const releasesGrid = document.getElementById('releases-grid');
+const addButton = document.getElementById('add-3-album');
+const imgGrid = document.getElementById('grid-img');
+const removeButton = document.getElementById('remove-3-album');
 
-    for (let i = 0; i < 3; i++) {
-        const newAlbum = document.createElement('li');
-        newAlbum.innerHTML = `https://loremflickr.com/480/480/cd,album,cover?random=1`
+const add3 = () => {
+  console.log('clicked')
+  const albums = Array.from(imgGrid.children);
+  for (let i = 0; i < 3; i++) {
+    const randomIndex = Math.floor(Math.random() * albums.length);
+    const randomAlbum = albums[randomIndex].src;
+    const newAlbumItem = document.createElement('img');
+    newAlbumItem.src = randomAlbum;
+    newAlbumItem.className = 'grid-image';
+    imgGrid.appendChild(newAlbumItem);
+  }
+};
+
+const remove3 = () => {
+  for (let i = 0; i < 3; i++) {
+    const firstImg = imgGrid.querySelector('img');
+    if (firstImg) {
+      imgGrid.removeChild(firstImg);
     }
+  }
+};
 
-}
+removeButton.onclick = remove3;
+addButton.onclick = add3;

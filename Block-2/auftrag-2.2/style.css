@@ -1,7 +1,11 @@
 html{
   background-color: #1cd761;
 }
-:root{
+:root {
+  --primary-color: #1cd761;
+  --secondary-color: #b7facf;
+  --text-color: #000000;
+  --alternative-text-color: #ffffff;
   font-size: 16px;
 }
 header {
@@ -20,16 +24,10 @@ nav a{
   Border: 2px
 }
 footer{
-  border-radius: 1em;
-  padding:1em;
-
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.75);
-  bottom: 0%;
-  width: 80%;
-  left: 10%;
-  right: 10%;
-}
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 1rem 1rem 0 0;
+  }
 grid{
   display:grid;
   grid-template-columns: repeat(3,150px);

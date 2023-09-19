@@ -1,0 +1,14 @@
+Accordion
+Name und Synonym: Klappliste, Aufklappmenü
+Einsatzzweck und Funktion: 
+Ein Accordion ist ein UI Component das erlaubt dem Benutzer Text zu verstecken oder zu anzeigen.
+Meistens nutzt man es um Informationen zusammen zu klappen das die nicht sehr viel platz brauchen.
+Es ist perfekt um platzt zu sparen.
+https://v6.mantine.dev/core/accordion/ 
+
+Carousel/Slideshow
+Name und Synonyme: Bilderkarussell, Bildershow
+Das Carousel ist eine Art Diashow man kann meistens mit Pfeilen links und 
+Rechts klicken um von bild zu bild wechseln.
+Mit diesem UI element kann man platz sparen wenn man mehrere Bilder verwendet. 
+https://getbootstrap.com/docs/4.0/components/carousel/

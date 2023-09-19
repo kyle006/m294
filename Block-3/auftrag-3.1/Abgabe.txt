@@ -1,0 +1,19 @@
+Dieses Programm loged alles und stellt alles auf der Webseite mit <p> tags dar
+Es loged fast alles ausser Mausbewegung, wenn man die seite anklickt wird 
+ein mausdown event aufgelistet, aber nicht die bewegung der maus.
+double klicks werden auch registriert.
+
+Wenn ich etwas im Textfeld eintrag gibt es mehrere events auf einmal 
+45: "keyup"-Ereignis durch INPUT mit dem Wert a ausgelöst.
+
+44: "input"-Ereignis durch INPUT mit dem Wert a ausgelöst.
+
+43: "beforeinput"-Ereignis durch INPUT ausgelöst.
+
+42: "keypress"-Ereignis durch INPUT ausgelöst.
+
+41: "keydown"-Ereignis durch INPUT ausgelöst.
+
+
+ zuerst Keydown, dann keypress, dan beforeinput, dann input und  dann keyup.
+ das selbe passiert wenn ich mit der maus was klicke

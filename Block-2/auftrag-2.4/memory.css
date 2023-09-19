@@ -17,7 +17,6 @@ font-size: 4rem;
 font-weight: bold;
 text-align: center
 }
-
 .tile.revealed img, .tile.found img {
   margin: 1rem auto;
   display: block;

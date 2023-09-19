@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded',() => {
   const canton = ['ag', 'ar', 'bl', 'fr', 'gl', 'ju', 'ne', 'ow', 'sh', 'sz', 'ti', 'vd', 'zg', 'ai', 'be', 'bs', 'ge', 'gr', 'lu', 'nw', 'sg', 'so', 'tg', 'ur', 'vs', 'zh'];
 
   const board = document.getElementById('board');
-  const tiles = board.getElementById('tile');
+  const tiles = board.getElementsByClassName("tile")
   const revealdTiles = board.getElementsByClassName('Tile revealed');
 
   const checkWin= () => {
@@ -21,9 +21,45 @@ document.addEventListener('DOMContentLoaded',() => {
       Array.from(revealdTiles).forEach(otherTile => otherTtile.classList.remove("revealed"));
     }
 
-    
+    Array.from(revealdTiles).forEach(otherTile => {
+      if (tile != otherTile && tile.children[0].src === otherTile.children[0].src) {
+
+        tile.classList.add("found");
+        otherTile.classList.add("found");
+      } 
+    });
+    tile.classList.add("revealed");
+    tries++;
+
+    checkWin()
   }
-})
+
+  const createTile = (canton) => {
+
+    const tileImage = document.createElement('img');
+    tileImage.setAttribute('src', `../img/${canton}.png`);
+
+    const tile = document.createElement('button');
+    tile.append(tileImage);
+    tile.className="tile";
+    tile.onclick = checkTurn;
+
+    return tile;
+  }
+
+  const initilizeBoard = () => {
+    board.innerHTML = "";
+    
+    const shuffeld = canton.sort(() => 0.5 - Math.random()).slice(0, 10);
+
+    for(let i = 2; i; i--){
+      for(let conton of shuffeld.sort(() => 0.5 - Math.random())){
+        board.appendChild(createTile(canton));
+    };
+  }
+  }
+  initializeBoard()
+});
 
 
 /* Path: Block-2/auftrag-2.4/memory.js
@@ -43,4 +79,4 @@ document.addEventListener('DOMContentLoaded', function () {
     tile.appendChild(tileImage);
     playground.appendChild(tile);
   });
-});
+});*/

@@ -4,7 +4,7 @@ const ortField = document.getElementById("ort");
 plzField.addEventListener("blur", async () => {
   try {
     const response = await fetch('places.json');
-    if (!response.ok) throw new Error('Network response was not ok');
+    
 
     const data = await response.json();
     const placeData = data.find(place => place.zipcode === plzField.value) || { place: "unbekannt" };

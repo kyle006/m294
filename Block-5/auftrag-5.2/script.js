@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("main > h2, main > img, main > p");
 
-  function isInViewport(element) {
+  function InViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
       rect.top >= 0 &&
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function checkScroll() {
     sections.forEach((section) => {
-      if (isInViewport(section)) {
+      if (InViewport(section)) {
         section.classList.add("fade-in-active");
         section.classList.add("slide-in-left-active");
         section.classList.add("swirl-in-active");

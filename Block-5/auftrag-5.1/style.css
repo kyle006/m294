@@ -1,0 +1,21 @@
+.square{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    transition: all 1.5s ease; 
+    top: 0; 
+    left: 0; 
+}
+
+.square.square-end  {
+    width: 150px;
+    height: 150px;
+    transform: rotate(360deg); /*smooth rotation*/
+    background-color: rgba(234, 111, 45, 0.9);
+    left: 50%;
+    top: 50%;
+}
+
+#square{
+    position: relative;
+}

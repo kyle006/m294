@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="de">
-
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Passwortbestätigung</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
-
   <body>
+    <div class="container">
+      <h1>Formular</h1>
+      <form id="myForm">
+        <div class="form-group">
+          <label for="E-Mail">E-Mail:</label>
+          <input type="text" id="E-Mail" name="E-Mail" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
 
+        <div class="form-group">
+          <label for="password-retry">Password wiederholen:</label>
+          <input
+            type="password"
+            id="passwordRepeat"
+            name="password-Repeat"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="AGB">AGB</label>
+          <input type="checkbox" id="AGB" name="AGB" required />
+        </div>
+        <button id="validate">Validate</button>
+      </form>
+    </div>
   </body>
-
 </html>

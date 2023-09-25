@@ -8,9 +8,9 @@
 }
 
 .square.square-end  {
-    width: 150px;
-    height: 150px;
-    transform: rotate(360deg); /*smooth rotation*/
+    width: 200px;
+    height: 200px;
+    transform: rotate(720deg); /*smooth rotation*/
     background-color: rgba(234, 111, 45, 0.9);
     left: 50%;
     top: 50%;

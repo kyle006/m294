@@ -1,10 +1,78 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
+    <script src="script.js" defer></script>
     <meta charset="UTF-8" />
     <title>Transitions and Animations</title>
-    <rel rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <style>
+      html {
+        height: 100%;
+        font-size: 18px;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100%;
+        padding: 0 20%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        height: 150px;
+        background-color: #ddd;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      footer {
+        height: 100px;
+        background-color: #ddd;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .fade-in {
+        opacity: 0;
+        transition: 1s;
+      }
+
+      .fade-in-active {
+        opacity: 1;
+      }
+
+      .slide-in-left {
+        opacity: 0;
+        transition: 1s;
+        transform: translateX(-200px);
+      }
+
+      .slide-in-left-active {
+        opacity: 1;
+        transform: none;
+      }
+
+      .swirl-in {
+        transition: 2s;
+        opacity: 0;
+        transform: rotate(720deg) scale(0);
+      }
+
+      .swirl-in-active {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
   </head>
 
   <body>
@@ -106,7 +174,7 @@
           sint?</span
         >
       </p>
-      <img src="unsplash1.jpg" class="fade-in" />
+      <img src="./unsplash1.jpg" class="fade-in" />
       <p class="fade-in">
         <span
           >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione
@@ -131,7 +199,7 @@
         >
       </p>
       <h2>Consequatur non</h2>
-      <img src="unsplash2.jpg" class="slide-in-left" />
+      <img src="./unsplash2.jpg" class="slide-in-left" />
       <p>
         <span
           >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt,
@@ -188,7 +256,7 @@
           esse ipsum ratione.</span
         >
       </p>
-      <img src="unsplash3.jpg" class="swirl-in" />
+      <img src="./unsplash3.jpg" class="swirl-in" />
       <p>
         <span
           >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit

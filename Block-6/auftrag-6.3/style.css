@@ -1,8 +1,5 @@
-.kategorie-list label {
-    display: inline-block;
-    margin-right: 10px; /* Adjust margin as needed */
+.kategorie-list  {
+   border: solid 1px black;
   }
 
-  .kategorie-list input[type="checkbox"] {
-    vertical-align: middle;
-  }
+

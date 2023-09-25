@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Formular mit Assistenzfunktion</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <form>
+      <div class="form-group">
+        <label for="vorname">Vorname:</label>
+        <input type="text" id="vorname" name="vorname" required>
+    </div>
 
+    <div class="form-group">
+        <label for="nachname">Nachname:</label>
+        <input type="text" id="nachname" name="nachname" required>
+    </div>
+
+    <div class="form-group">
+        <label for="strasse">Strasse:</label>
+        <input type="text" id="strasse" name="strasse" required>
+    </div>
+
+    <div class="form-group">
+        <label for="plz">Postleitzahl:</label>
+        <input type="text" id="plz" name="plz" required>
+    </div>
+
+    <div class="form-group">
+        <label for="ort">Ort:</label>
+        <input type="text" id="ort" name="ort" required>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Absenden">
     </form>
   </body>
 </html>

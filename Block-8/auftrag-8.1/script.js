@@ -11,6 +11,13 @@ function increase() {
   history.pushState({ count: counter }, "", `?count=${counter}`);
 }
 
+function onPopState(event) {
+  if (event.state && event.state.count !== undefined) {
+    counter = event.state.count;
+    updateDisplay();
+  }
+}
+
 function decrease() {
   counter--;
   updateDisplay();

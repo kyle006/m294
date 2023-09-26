@@ -46,7 +46,7 @@ body, h1, h2, ul, li, form {
   }
   
   /* Style the new task form */
-  .new_task, .edit_task {
+  .addtask, .edittask {
     background-color: #fff;
     margin: 20px;
     padding: 20px;
@@ -54,7 +54,7 @@ body, h1, h2, ul, li, form {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
-  .new_task h2, .edit_task h2 {
+  .addtask h2, .edittask h2 {
     font-size: 24px;
   }
   

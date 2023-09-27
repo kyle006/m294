@@ -18,25 +18,21 @@ const taskList = document.getElementById("taskList");
   
 
     // Example function to delete a task by ID
-    function deleteTask() {
+    async function deleteTask() {
       const taskIdToDelete = taskIdToDeleteInput.value;
-      
-      // Make a DELETE request
-      fetch(`http://localhost:8080/tasks/${taskIdToDelete}`, {
-        method: 'DELETE',
-      })
-      .then(response => {
+      try {
+        const response = await fetch(`http://localhost:8080/task/${taskIdToDelete}`, {
+          method: 'DELETE',
+        });
         if (response.status === 200) {
+          listAllTasks();
         } else {
-          // Handle deletion failure (e.g., task not found or other errors)
           console.error('Failed to delete task:', response.statusText);
         }
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error:', error);
-      });
+      }
     }
-    
 
     // Example function to find a task by ID
     function findTask() {

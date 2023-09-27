@@ -1,83 +1,52 @@
-/* Reset some default styles */
-body, h1, h2, ul, li, form {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Set a background color and font family */
-  body {
+body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-  }
-  
-  /* Style the header */
-  .header {
-    background-color: #333;
-    color: #fff;
     padding: 20px;
-    text-align: center;
   }
   
-  .header h1 {
-    font-size: 28px;
+  h2 {
+    margin-bottom: 10px;
   }
   
-  /* Style the task list container */
-  .task-list {
-    background-color: #fff;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  h3 {
+    margin-top: 20px;
   }
   
-  .task-list h2 {
-    font-size: 24px;
-  }
-  
-  /* Style the task list items */
-  ul#taskList {
+  ul {
     list-style-type: none;
     padding: 0;
   }
   
-  ul#taskList li {
-    margin-bottom: 10px;
+  li {
+    margin-bottom: 5px;
   }
   
-  /* Style the new task form */
-  .addtask, .edittask {
-    background-color: #fff;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .addtask h2, .edittask h2 {
-    font-size: 24px;
-  }
-  
-  /* Style the input fields and buttons */
   input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    padding: 5px;
+    margin-right: 10px;
   }
   
-  button[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
+  button {
+    padding: 5px 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
   }
   
-  button[type="submit"]:hover {
-    background-color: #555;
+  button#addTask {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  button#deleteTask {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  button#findTask {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  button#listTasks {
+    background-color: #ff9800;
+    color: white;
   }
   

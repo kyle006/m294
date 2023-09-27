@@ -7,7 +7,6 @@ const taskList = document.getElementById("taskList");
     const findTaskButton = document.getElementById("findTask");
     const listTasksButton = document.getElementById("listTasks");
 
-    // You can define your JavaScript functions to interact with the API here
 
     function addTaskToList(task) {
       const taskList = document.getElementById('taskList');
@@ -17,7 +16,6 @@ const taskList = document.getElementById("taskList");
     }
   
 
-    // Example function to delete a task by ID
     async function deleteTask() {
       const taskIdToDelete = taskIdToDeleteInput.value;
       try {
@@ -34,38 +32,12 @@ const taskList = document.getElementById("taskList");
       }
     }
 
-    // Example function to find a task by ID
-    function findTask() {
-      const taskIdToFind = taskIdToFindInput.value;
-      fetch(`http://localhost:8080/tasks/${taskIdToFind}`, {
-        method: 'GET',
-      })
-      .then(response => {
-        if (response.status === 200) {
-          // Handle the successful response here
-          // For example, you can access the response data using response.json()
-          // and perform further actions.
-        } else {
-          console.error('Failed to get task:', response.statusText);
-          // Handle the error here if needed.
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        // Handle any network errors or exceptions here.
-      })
-      .finally(() => {
-        // Regardless of success or failure, clear the input field
-        taskIdToFindInput.value = "";
-      });
-    }
+    
 
-    // Example function to list all tasks
     function listAllTasks() {
       const taskList = document.getElementById('taskList');
-      taskList.innerHTML = ''; // Clear the current list
+      taskList.innerHTML = ''; 
   
-      // Fetch tasks from the server
       fetch('http://localhost:8080/tasks')
         .then(response => response.json())
         .then(data => {
@@ -81,9 +53,8 @@ const taskList = document.getElementById("taskList");
     function handleAddTask() {
         const taskTitle = taskTitleInput.value;
       
-        // Replace with your own logic to generate a task ID and set completion status
         const task = {
-          id: Math.floor(Math.random() * 100),  // Generate a random ID for demonstration
+          id: Math.floor(Math.random() * 100),  
           title: taskTitle,
           completed: false
         };
@@ -91,7 +62,6 @@ const taskList = document.getElementById("taskList");
       
         addTaskToList(task);
       }
-    // Add event listeners for buttons
     addTaskButton.addEventListener("click", handleAddTask);
     deleteTaskButton.addEventListener("click", deleteTask);
     findTaskButton.addEventListener("click", findTask);

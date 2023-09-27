@@ -34,31 +34,17 @@
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const mainTexts = document.querySelectorAll(
-          ".accordion > section > main"
-        );
+        const sections = document.querySelectorAll(".accordion > section");
 
-        document
-          .querySelectorAll(".accordion > section > header")
-          .forEach((accordionHeader, index) => {
-            accordionHeader.addEventListener("click", () => {
-              toggleAccordionSection(mainTexts[index]);
-            });
-          });
+        sections.forEach((section) => {
+          const header = section.querySelector("header");
+          const mainText = section.querySelector("main");
 
-        function toggleAccordionSection(mainText) {
-          mainTexts.forEach((text) => {
-            if (text === mainText) {
-              if (text.style.display === "block") {
-                text.style.display = "none";
-              } else {
-                text.style.display = "block";
-              }
-            } else {
-              text.style.display = "none";
-            }
+          header.addEventListener("click", () => {
+            mainText.style.display =
+              mainText.style.display === "block" ? "none" : "block";
           });
-        }
+        });
       });
     </script>
     <script>

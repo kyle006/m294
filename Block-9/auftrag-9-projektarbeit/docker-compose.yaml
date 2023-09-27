@@ -3,4 +3,4 @@ services:
   my-app:
     image: ghcr.io/openscript/course-zli-m294-project:latest
     ports:
-      - "8080:80"
+      - "8080:3000"

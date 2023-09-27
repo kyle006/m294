@@ -63,7 +63,6 @@ const taskList = document.getElementById("taskList");
         taskIdToFindInput.value = "";
       });
     }
-    
 
     // Example function to list all tasks
     function listAllTasks() {

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Accordion</title>
+    <style>
+      .accordion > section > main {
+        display: none;
+      }
+
+      .accordion > section.open > header {
+        color: red;
+      }
+
+      .accordion > section.open > main {
+        display: block;
+      }
+
+      .accordion > section > header {
+        cursor: pointer;
+        display: flex;
+        padding: 0.5rem 0;
+      }
+
+      .accordion > section > header > h3 {
+        padding: 0;
+        margin: 0;
+        margin-left: 0.25rem;
+      }
+
+      /* Lücke: Ersetzen Sie diesen Kommentar mit Ihrer Lösung. */
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .querySelectorAll(".accordion > section > header")
+          .forEach((accordionHeader) => {
+            accordionHeader.onclick = () => {
+              closeAllOpenSectionsOfAccordion(accordionHeader);
+              openSectionOfClickedHeader(accordionHeader);
+            };
+          });
+
+        function closeAllOpenSectionsOfAccordion(accordionHeader) {
+          const section = accordionHeader.parentElement;
+          section.classList.toggle("open");
+          // Lücke: Ersetzen Sie diesen Kommentar mit Ihrer Lösung.
+        }
+
+        function openSectionOfClickedHeader(accordionHeader) {
+          const section = accordionHeader.parentElement;
+          section.classList.toggle("");
+          // Lücke: Ersetzen Sie diesen Kommentar mit Ihrer Lösung.
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- Lücke: Ergänzen Sie die nachfolgende Zeile mit Ihrer Lösung und löschen Sie diesen Kommentar. -->
+    <div class="accordion">
+      <section>
+        <header>
+          <h3>HTML</h3>
+        </header>
+        <main>
+          Erstellen von HTML-Dokumenten mit verschiedenen Elementen wie
+          Überschriften, Absätzen, Listen und Links.
+        </main>
+      </section>
+      <section>
+        <header>
+          <h3>CSS</h3>
+        </header>
+        <main>
+          Anwendung von CSS zur Gestaltung von HTML-Dokumenten, z.B. zur
+          Definition von Schriften, Farben und Layouts.
+        </main>
+      </section>
+      <section>
+        <header>
+          <h3>JavaScript</h3>
+        </header>
+        <main>
+          JavaScript wird verwendet um z.B dynamische element zu erstellen
+        </main>
+      </section>
+      <!-- Lücke: Ersetzen Sie diesen Kommentar mit Ihrer Lösung. -->
+    </div>
+  </body>
+</html>
